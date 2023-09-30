@@ -1,6 +1,43 @@
-function App() {
+import { useState } from "react"
 
-  return <div>Init</div>
+interface Materials {
+  pickaxe: number
+  rock: number
+  wood: number
+  axe: number
+}
+
+function App() {
+  const [materials, setMaterials] = useState<Materials>({
+    wood: 0,
+    rock: 0,
+    pickaxe: 0,
+    axe: 0
+  })
+
+  const incrementMaterial = (material: keyof Materials) => {
+    setMaterials(previousMaterials => ({ ...previousMaterials, [material]: previousMaterials[material] + 1 }))
+  }
+
+  return (
+    <div className="w-full h-screen max-w-7 mx-auto py-2 px-16 bg-black text-white">
+      <pre>{JSON.stringify(materials, null, 2)}</pre>
+      <div className="flex justify-start items-center space-x-2">
+        <CtaIncrement value="wood" onClick={() => incrementMaterial('wood')} />
+        <CtaIncrement value="rock" onClick={() => incrementMaterial('rock')} />
+        {materials.rock > 5 && materials.wood > 5 && <CtaIncrement value="pickaxe" onClick={() => incrementMaterial('pickaxe')} />}
+        {materials.rock > 5 && materials.wood > 5 && <CtaIncrement value="axe" onClick={() => incrementMaterial('axe')} />}
+      </div>
+    </div>
+  )
+}
+
+function CtaIncrement({ value, onClick }: { value: keyof Materials, onClick: () => void }) {
+  return (
+    <button onClick={onClick} className="p-2 border border-white rounded-md">
+      Create {value}
+    </button>
+  )
 }
 
 export default App
