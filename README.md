@@ -1,27 +1,29 @@
-# React + TypeScript + Vite
+# INCREMENTAL GAME
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game Overview
+In this incremental game, your objective is to build a prosperous medieval kingdom. You will start with limited resources and tools, but with each click, you can gather more resources and craft new tools.
 
-Currently, two official plugins are available:
+Resources
+There are two primary resources in the game:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Wood: Used for construction and crafting.
+Stone: Used for advanced construction and crafting.
+Tools
+You have access to two basic tools:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Pickaxe: Used to gather stone.
+Axe: Used to gather wood.
+How to Play
+Gathering Resources
+Click on the "Gather Wood" button to collect wood.
+Click on the "Gather Stone" button to collect stone.
+Crafting Tools
+As you gather resources, you can craft new tools to increase your resource gathering efficiency.
+Click on the "Craft Pickaxe" button to craft a pickaxe using wood.
+Click on the "Craft Axe" button to craft an axe using wood.
+Crafting tools requires a certain amount of wood.
+Building Your Kingdom
+Accumulate resources by gathering wood and stone and crafting tools.
+Use the resources to construct buildings and develop your medieval kingdom.
+Contributing
+If you'd like to contribute to the development of this game, feel free to fork the repository and submit pull requests. We welcome any enhancements, bug fixes, or new features.
